@@ -91,10 +91,11 @@ const Register = () => {
             onChange={handlePass}
             required
           />
+          <br />
           <button type="submit" onClick={register}>
             Register
           </button>
-          { isLoading ? <div className="loader" /> : null}
+          {isLoading ? <div className="loader" /> : null}
         </form>
       </section>
     </>
