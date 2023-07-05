@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export function useUser() {
   const [user, setUser] = useState(null);
-  const [authenticated, setAutenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,10 +16,10 @@ export function useUser() {
         return;
       }
       setUser(user);
-      setAutenticated(authenticated);
+      setAuthenticated(authenticated);
     }
     getUserDetails();
-  }, []);
+  }, [navigate]);
 
   return { user, authenticated };
 }
